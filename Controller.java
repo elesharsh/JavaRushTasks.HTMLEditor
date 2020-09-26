@@ -8,16 +8,16 @@ public class Controller {
     private HTMLDocument document;
     private File currentFile;
 
+    public Controller(View view) {
+        this.view = view;
+    }
+
     public static void main(String[] args) {
         View view = new View();
         Controller controller = new Controller(view);
         view.setController(controller);
         view.init();
         controller.init();
-    }
-
-    public Controller(View view) {
-        this.view = view;
     }
 
     public void init() {
